@@ -1,0 +1,33 @@
+{
+    "name": "AutoQuant-Alpha Dev Environment",
+    "build": {
+        "dockerfile": "../Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.mypy-type-checker",
+                "ms-python.black-formatter",
+                "ms-toolsai.jupyter",
+                "ryanluker.vscode-coverage-gutters"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "editor.formatOnSave": true,
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter"
+                }
+            }
+        }
+    },
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "remoteEnv": {
+        "ALPACA_API_KEY": "${localEnv:ALPACA_API_KEY}",
+        "ALPACA_SECRET_KEY": "${localEnv:ALPACA_SECRET_KEY}",
+        "ALPACA_BASE_URL": "${localEnv:ALPACA_BASE_URL}"
+    },
+    "postCreateCommand": "pip install -r requirements.txt"
+}
