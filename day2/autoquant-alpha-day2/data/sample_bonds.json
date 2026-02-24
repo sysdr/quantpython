@@ -1,0 +1,32 @@
+[
+  {
+    "label": "UST 2Y",
+    "cusip": "912828XX1",
+    "face_value": 100.0,
+    "coupon_rate": 0.0475,
+    "maturity_years_from_today": 2,
+    "frequency": 2,
+    "day_count": "ACT_ACT_ISDA",
+    "market_ytm": 0.048
+  },
+  {
+    "label": "UST 10Y",
+    "cusip": "912828YY2",
+    "face_value": 100.0,
+    "coupon_rate": 0.0425,
+    "maturity_years_from_today": 10,
+    "frequency": 2,
+    "day_count": "ACT_ACT_ISDA",
+    "market_ytm": 0.044
+  },
+  {
+    "label": "UST 30Y",
+    "cusip": "912810ZZ3",
+    "face_value": 100.0,
+    "coupon_rate": 0.0450,
+    "maturity_years_from_today": 30,
+    "frequency": 2,
+    "day_count": "ACT_ACT_ISDA",
+    "market_ytm": 0.046
+  }
+]

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="white"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="monospace" font-size="18" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#2c3e50">
+    AutoQuant-Alpha — Bond Pricing Engine: Component Architecture
+  </text>
+
+  <!-- ── Outer engine boundary ── -->
+  <rect x="30" y="70" width="840" height="500" rx="16" ry="16"
+        fill="none" stroke="#bdc3c7" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="60" y="95" font-family="monospace" font-size="11" fill="#95a5a6">AutoQuant-Alpha Engine</text>
+
+  <!-- ── BondSpec ── -->
+  <rect x="60" y="120" width="160" height="80" rx="10" ry="10"
+        fill="#eaf6fb" stroke="#3498db" stroke-width="2"/>
+  <text x="140" y="152" font-family="monospace" font-size="13" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#2980b9">BondSpec</text>
+  <text x="140" y="172" font-family="monospace" font-size="10"
+        text-anchor="middle" dominant-baseline="middle" fill="#555">@dataclass(slots=True)</text>
+
+  <!-- ── DayCountConvention ── -->
+  <rect x="60" y="260" width="160" height="80" rx="10" ry="10"
+        fill="#fef9e7" stroke="#e67e22" stroke-width="2"/>
+  <text x="140" y="292" font-family="monospace" font-size="13" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#d35400">DayCount</text>
+  <text x="140" y="312" font-family="monospace" font-size="10"
+        text-anchor="middle" dominant-baseline="middle" fill="#555">30/360, Act/Act, Act/365</text>
+
+  <!-- ── CashFlowScheduler ── -->
+  <rect x="300" y="180" width="180" height="90" rx="10" ry="10"
+        fill="#eafaf1" stroke="#2ecc71" stroke-width="2"/>
+  <text x="390" y="217" font-family="monospace" font-size="13" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#27ae60">CashFlow</text>
+  <text x="390" y="235" font-family="monospace" font-size="13" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#27ae60">Scheduler</text>
+  <text x="390" y="254" font-family="monospace" font-size="9"
+        text-anchor="middle" dominant-baseline="middle" fill="#555">generates coupon dates + amounts</text>
+
+  <!-- ── DiscountEngine ── -->
+  <rect x="560" y="140" width="180" height="80" rx="10" ry="10"
+        fill="#fef5fb" stroke="#9b59b6" stroke-width="2"/>
+  <text x="650" y="172" font-family="monospace" font-size="13" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#8e44ad">Discount</text>
+  <text x="650" y="190" font-family="monospace" font-size="13" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#8e44ad">Engine</text>
+  <text x="650" y="206" font-family="monospace" font-size="9"
+        text-anchor="middle" dominant-baseline="middle" fill="#555">numpy vectorized</text>
+
+  <!-- ── YTM Solver ── -->
+  <rect x="560" y="280" width="180" height="80" rx="10" ry="10"
+        fill="#fef9e7" stroke="#e67e22" stroke-width="2"/>
+  <text x="650" y="312" font-family="monospace" font-size="13" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#d35400">YTM Solver</text>
+  <text x="650" y="332" font-family="monospace" font-size="9"
+        text-anchor="middle" dominant-baseline="middle" fill="#555">Newton-Raphson + bisection</text>
+
+  <!-- ── PriceResult ── -->
+  <rect x="300" y="410" width="180" height="100" rx="10" ry="10"
+        fill="#eaf6fb" stroke="#3498db" stroke-width="2.5"/>
+  <text x="390" y="445" font-family="monospace" font-size="13" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#2980b9">PriceResult</text>
+  <text x="390" y="465" font-family="monospace" font-size="9"
+        text-anchor="middle" dominant-baseline="middle" fill="#555">dirty · clean · accrued</text>
+  <text x="390" y="480" font-family="monospace" font-size="9"
+        text-anchor="middle" dominant-baseline="middle" fill="#555">ytm · mod_dur · dv01</text>
+  <text x="390" y="495" font-family="monospace" font-size="9"
+        text-anchor="middle" dominant-baseline="middle" fill="#555">solver_converged</text>
+
+  <!-- ── Alpaca Bridge ── -->
+  <rect x="700" y="420" width="150" height="70" rx="10" ry="10"
+        fill="#fdedec" stroke="#e74c3c" stroke-width="2"/>
+  <text x="775" y="450" font-family="monospace" font-size="12" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#c0392b">Alpaca</text>
+  <text x="775" y="468" font-family="monospace" font-size="12" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle" fill="#c0392b">Bridge</text>
+  <text x="775" y="484" font-family="monospace" font-size="9"
+        text-anchor="middle" dominant-baseline="middle" fill="#555">ETF market prices</text>
+
+  <!-- ── Arrows ── -->
+  <!-- BondSpec → CashFlowScheduler -->
+  <line x1="220" y1="155" x2="298" y2="210" stroke="#3498db" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <!-- DayCount → CashFlowScheduler -->
+  <line x1="220" y1="295" x2="298" y2="245" stroke="#e67e22" stroke-width="2" marker-end="url(#arrow-orange)"/>
+  <!-- CashFlowScheduler → DiscountEngine -->
+  <line x1="480" y1="205" x2="558" y2="185" stroke="#2ecc71" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <!-- CashFlowScheduler → YTM Solver -->
+  <line x1="480" y1="235" x2="558" y2="305" stroke="#2ecc71" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <!-- DiscountEngine → PriceResult -->
+  <line x1="650" y1="220" x2="490" y2="420" stroke="#9b59b6" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  <!-- YTM Solver → PriceResult -->
+  <line x1="620" y1="360" x2="490" y2="430" stroke="#e67e22" stroke-width="2" marker-end="url(#arrow-orange)"/>
+  <!-- PriceResult → Alpaca Bridge (validation) -->
+  <line x1="480" y1="460" x2="698" y2="460" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-red)"/>
+
+  <!-- ── Arrow Markers ── -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3498db"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e67e22"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2ecc71"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#9b59b6"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e74c3c"/>
+    </marker>
+  </defs>
+
+  <!-- Legend -->
+  <rect x="60" y="530" width="760" height="30" rx="5" ry="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="450" y="545" font-family="monospace" font-size="10"
+        text-anchor="middle" dominant-baseline="middle" fill="#666">
+    Solid arrows = data flow · Dashed arrow = validation path (optional Alpaca credentials)
+  </text>
+</svg>
