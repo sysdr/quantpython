@@ -1,0 +1,1 @@
+"""AutoQuant-Alpha CAGR Module."""
