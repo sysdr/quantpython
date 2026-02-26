@@ -1,0 +1,92 @@
+{
+  "AAPL": {
+    "symbol": "AAPL",
+    "exchange": "NYSE",
+    "asset_class": "us_equity",
+    "tradable": true,
+    "fractionable": true,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  },
+  "MSFT": {
+    "symbol": "MSFT",
+    "exchange": "NASDAQ",
+    "asset_class": "us_equity",
+    "tradable": true,
+    "fractionable": true,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  },
+  "TSLA": {
+    "symbol": "TSLA",
+    "exchange": "NYSE",
+    "asset_class": "us_equity",
+    "tradable": true,
+    "fractionable": false,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  },
+  "AMZN": {
+    "symbol": "AMZN",
+    "exchange": "NYSE",
+    "asset_class": "us_equity",
+    "tradable": true,
+    "fractionable": true,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  },
+  "NVDA": {
+    "symbol": "NVDA",
+    "exchange": "NASDAQ",
+    "asset_class": "us_equity",
+    "tradable": false,
+    "fractionable": true,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  },
+  "META": {
+    "symbol": "META",
+    "exchange": "ARCA",
+    "asset_class": "us_equity",
+    "tradable": true,
+    "fractionable": true,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  },
+  "GOOGL": {
+    "symbol": "GOOGL",
+    "exchange": "NASDAQ",
+    "asset_class": "us_equity",
+    "tradable": true,
+    "fractionable": true,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  },
+  "JPM": {
+    "symbol": "JPM",
+    "exchange": "ARCA",
+    "asset_class": "us_equity",
+    "tradable": true,
+    "fractionable": true,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  },
+  "SPY": {
+    "symbol": "SPY",
+    "exchange": "ARCA",
+    "asset_class": "us_equity",
+    "tradable": true,
+    "fractionable": true,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  },
+  "QQQ": {
+    "symbol": "QQQ",
+    "exchange": "NYSE",
+    "asset_class": "us_equity",
+    "tradable": true,
+    "fractionable": true,
+    "min_order_size": 1.0,
+    "price_increment": 0.01
+  }
+}
