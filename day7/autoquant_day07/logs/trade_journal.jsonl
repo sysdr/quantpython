@@ -1,0 +1,18 @@
+{"ts":"2026-03-02T05:33:26.524528Z","level":"INFO","logger":"autoquant.system","msg":"Demo session starting"}
+{"ts":"2026-03-02T05:33:26.526616Z","level":"INFO","logger":"autoquant.system","msg":"Submitting BUY 1 SPY @ 502.5"}
+{"ts":"2026-03-02T05:52:40.153012Z","level":"INFO","logger":"autoquant.system","msg":"Demo session starting"}
+{"ts":"2026-03-02T05:52:40.154333Z","level":"INFO","logger":"autoquant.system","msg":"Submitting BUY 1 SPY @ 502.5"}
+{"ts":"2026-03-02T05:52:43.003082Z","level":"ERROR","logger":"autoquant.system","msg":"API call failed: {\"message\": \"unauthorized.\"}\n"}
+{"ts":"2026-03-02T05:59:52.579807Z","level":"INFO","logger":"autoquant.system","msg":"Demo session starting"}
+{"ts":"2026-03-02T05:59:52.585725Z","level":"INFO","logger":"autoquant.system","msg":"Submitting BUY 1 SPY @ 502.5"}
+{"ts":"2026-03-02T05:59:56.250224Z","level":"ERROR","logger":"autoquant.system","msg":"API call failed: {\"message\": \"unauthorized.\"}\n"}
+{"ts":"2026-03-02T06:08:35.846412Z","level":"INFO","logger":"autoquant.system","msg":"Demo session starting"}
+{"ts":"2026-03-02T06:08:35.847280Z","level":"INFO","logger":"autoquant.system","msg":"Submitting BUY 1 SPY @ 502.5"}
+{"ts":"2026-03-02T06:08:35.958633Z","level":"INFO","logger":"autoquant.system","msg":"Using mock mode (API credentials not configured)"}
+{"ts":"2026-03-02T06:08:35.958863Z","level":"INFO","logger":"autoquant.trade","msg":"ORDER_FILL","side":"buy","slippage_bps":-2.7861,"symbol":"SPY","latency_ms":100.858,"fill_price":502.36,"qty":1.0,"limit_price":502.5,"order_id":"MOCK-2BF10752A0F4"}
+{"ts":"2026-03-02T06:08:35.959025Z","level":"INFO","logger":"autoquant.system","msg":"Fill logged | order_id=MOCK-2BF10752A0F4 slippage=-2.79bps latency=101.0ms"}
+{"ts":"2026-03-02T06:08:43.013580Z","level":"INFO","logger":"autoquant.system","msg":"Demo session starting"}
+{"ts":"2026-03-02T06:08:43.014227Z","level":"INFO","logger":"autoquant.system","msg":"Submitting BUY 1 SPY @ 502.5"}
+{"ts":"2026-03-02T06:08:43.123660Z","level":"INFO","logger":"autoquant.system","msg":"Using mock mode (API credentials not configured)"}
+{"ts":"2026-03-02T06:08:43.124023Z","level":"INFO","logger":"autoquant.trade","msg":"ORDER_FILL","side":"buy","qty":1.0,"latency_ms":100.829,"symbol":"SPY","order_id":"MOCK-3B5B9CF38DBF","fill_price":502.63,"limit_price":502.5,"slippage_bps":2.5871}
+{"ts":"2026-03-02T06:08:43.124147Z","level":"INFO","logger":"autoquant.system","msg":"Fill logged | order_id=MOCK-3B5B9CF38DBF slippage=2.59bps latency=101.0ms"}

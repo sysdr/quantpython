@@ -1,0 +1,20 @@
+2026-03-02T11:03:26.524 [MainThread] INFO     autoquant.system: Demo session starting
+2026-03-02T11:03:26.526 [MainThread] INFO     autoquant.system: Submitting BUY 1 SPY @ 502.5
+2026-03-02T11:22:40.153 [MainThread] INFO     autoquant.system: Demo session starting
+2026-03-02T11:22:40.154 [MainThread] INFO     autoquant.system: Submitting BUY 1 SPY @ 502.5
+2026-03-02T11:22:43.003 [MainThread] ERROR    autoquant.system: API call failed: {"message": "unauthorized."}
+
+2026-03-02T11:29:52.579 [MainThread] INFO     autoquant.system: Demo session starting
+2026-03-02T11:29:52.585 [MainThread] INFO     autoquant.system: Submitting BUY 1 SPY @ 502.5
+2026-03-02T11:29:56.250 [MainThread] ERROR    autoquant.system: API call failed: {"message": "unauthorized."}
+
+2026-03-02T11:38:35.846 [MainThread] INFO     autoquant.system: Demo session starting
+2026-03-02T11:38:35.847 [MainThread] INFO     autoquant.system: Submitting BUY 1 SPY @ 502.5
+2026-03-02T11:38:35.958 [MainThread] INFO     autoquant.system: Using mock mode (API credentials not configured)
+2026-03-02T11:38:35.958 [MainThread] INFO     autoquant.trade: ORDER_FILL
+2026-03-02T11:38:35.959 [MainThread] INFO     autoquant.system: Fill logged | order_id=MOCK-2BF10752A0F4 slippage=-2.79bps latency=101.0ms
+2026-03-02T11:38:43.013 [MainThread] INFO     autoquant.system: Demo session starting
+2026-03-02T11:38:43.014 [MainThread] INFO     autoquant.system: Submitting BUY 1 SPY @ 502.5
+2026-03-02T11:38:43.123 [MainThread] INFO     autoquant.system: Using mock mode (API credentials not configured)
+2026-03-02T11:38:43.124 [MainThread] INFO     autoquant.trade: ORDER_FILL
+2026-03-02T11:38:43.124 [MainThread] INFO     autoquant.system: Fill logged | order_id=MOCK-3B5B9CF38DBF slippage=2.59bps latency=101.0ms
