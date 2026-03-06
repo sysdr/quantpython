@@ -2,10 +2,12 @@
 
 ## Quick Start
 ```bash
-cp .env.example .env      # fill in your Alpaca Paper credentials
+# Create .env with your Alpaca Paper credentials (optional for demo):
+#   ALPACA_API_KEY=your_key
+#   ALPACA_SECRET_KEY=your_secret
 pip install -r requirements.txt
-python start.py           # fetch data + compute returns
-python demo.py            # live Rich dashboard
+python start.py           # fetch data + compute returns (requires .env)
+python demo.py            # live Rich dashboard (uses synthetic data if no .env)
 python verify.py          # full test suite
 python cleanup.py         # remove generated data
 ```
