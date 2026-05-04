@@ -1,0 +1,5 @@
+numpy>=1.26
+rich>=13.7
+alpaca-py>=0.20
+python-dotenv>=1.0
+pytest>=8.0
